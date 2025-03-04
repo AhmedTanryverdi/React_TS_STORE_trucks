@@ -1,0 +1,40 @@
+@import "../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.news {
+		width: 100%;
+
+		.container {
+			width: 768px;
+			padding-top: 20px;
+		}
+
+		.newItem {
+			height: 259px;
+			background-size: 413px 259px;
+			margin-top: 12px;
+
+			.newText {
+				p {
+					display: none;
+				}
+			}
+
+			.newData {
+				margin-top: 20px;
+			}
+
+			.newText,
+			.newData,
+			.newTitle {
+				width: 288px;
+				margin-right: 50px;
+			}
+		}
+
+		.newCards {
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: 18px;
+		}
+	}
+}

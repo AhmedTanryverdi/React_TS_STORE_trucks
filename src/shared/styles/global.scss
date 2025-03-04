@@ -1,0 +1,17 @@
+$primaryBtnColor: #FEC80B;
+$primaryTextColor: #000000;
+$footerBgColor: #000000;
+
+
+@mixin flexPosition($h, $v, $dir: row){
+    display: flex;
+    justify-content: $h;
+    align-items: $v;
+    flex-direction: $dir;
+}
+
+@mixin font($lh, $fs: 14px, $fw: 400){
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+}

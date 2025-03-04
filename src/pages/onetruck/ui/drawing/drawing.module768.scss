@@ -1,0 +1,27 @@
+@import "../../../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.drawing {
+		width: 100%;
+		margin-top: 80px;
+
+		.container {
+			width: 768px;
+		}
+
+		.content {
+			@include flexPosition(center, center, column);
+			column-gap: 16px;
+			img {
+				width: 100%;
+				height: 569px;
+			}
+			.items {
+				img {
+					width: 88px;
+					height: 88px;
+				}
+			}
+		}
+	}
+}

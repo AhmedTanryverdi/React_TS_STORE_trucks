@@ -1,0 +1,64 @@
+@import "../../shared/styles/global.scss";
+
+.footer {
+	width: 100%;
+	background-color: $footerBgColor;
+	padding: 4%;
+}
+
+.container {
+	display: flex;
+}
+
+.left {
+	width: 35%;
+	@include flexPosition(flex-start, flex-start, column);
+	row-gap: 20px;
+}
+
+.address {
+	@include font(20.8px, 16px, 500);
+	color: #ffffff;
+	opacity: 0.5;
+}
+
+.orderCallBtn {
+	width: 50%;
+	height: 44px;
+	border: none;
+	background-color: $primaryBtnColor;
+	border-radius: 10px;
+}
+
+.another {
+	@include flexPosition(flex-start, flex-start, column);
+	@include font(16.41px, 14px, 400);
+	color: #ffffff;
+	opacity: 0.5;
+
+	span:last-child {
+		margin-top: 20px;
+	}
+}
+
+.right {
+	flex: 1;
+	@include flexPosition(flex-start, center);
+	column-gap: 100px;
+	margin-left: 10%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.container {
+		@include flexPosition(flex-start, flex-start, column);
+        row-gap: 34px;
+	}
+
+    .orderCallBtn{
+        width: 156px;
+    }
+
+    .right{
+        @include flexPosition(flex-start, flex-start, column);
+    }
+}

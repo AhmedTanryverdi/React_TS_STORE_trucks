@@ -1,0 +1,32 @@
+@import "../../../shared/styles/global.scss";
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.CardTruck {
+		width: 136px;
+		row-gap: 12px;
+
+		.favorite {
+			width: 24px;
+			height: 24px;
+			right: 3px;
+			top: 3px;
+		}
+
+		img {
+			width: 134px;
+			height: 111px;
+		}
+
+		.model {
+			width: 132px;
+			@include font(21px, 16px, 500);
+            flex-wrap: wrap;
+            text-align: center;
+		}
+
+		.btn {
+			width: 132px;
+			height: 40px;
+		}
+	}
+}

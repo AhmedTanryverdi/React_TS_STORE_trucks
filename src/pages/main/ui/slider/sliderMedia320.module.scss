@@ -1,0 +1,17 @@
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.container {
+		width: 100%;
+        margin: 0 auto;
+	}
+
+	.row {
+		img {
+			width: 320px;
+			height: 320px;
+			object-position: left;
+			object-fit: cover;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5875) 54.17%, rgba(0, 0, 0, 0.327131) 80.73%, rgba(0, 0, 0, 0) 100%);
+		}
+	}
+}

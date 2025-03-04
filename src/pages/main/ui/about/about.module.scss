@@ -1,0 +1,39 @@
+@import '../../../../shared/styles/global.scss';
+
+.about{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.container{
+    background-color: $primaryBtnColor;
+}
+
+.row{
+    @include flexPosition(space-between, center);
+    margin: 0 auto;
+    width: 1320px;
+    padding: 10px;
+
+    .col{
+        width: 312px;
+        text-align: center;
+        @include flexPosition(center, center, column);
+        row-gap: 18px;
+        color: $primaryTextColor;
+
+        h2{
+            @include flexPosition(center, center, column);
+            @include font(100px, 100px, 500);
+
+            span{
+                @include font(38.4px, 32px, 500);
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+@import './aboutMedia768.module.scss';
+@import './aboutMedia320.module.scss';
+

@@ -1,0 +1,37 @@
+@import "../../../shared/styles/global.scss";
+
+.pagination {
+	@include flexPosition(center, center, column);
+	row-gap: 43px;
+
+	.items {
+		@include flexPosition(center, center);
+
+		span {
+			@include flexPosition(center, center);
+			@include font(20px, 16px, 500);
+		}
+
+		ul {
+			@include flexPosition(center, center);
+			column-gap: 5px;
+			margin-left: 10px;
+			margin-right: 10px;
+
+			li{
+				button{
+					width: 32px;
+					height: 32px;
+					border: none;
+					background-color:  transparent;
+				}
+
+				button:focus{
+					border-radius: 50%;
+					background-color: $primaryBtnColor;
+					@include font(20px, 18px, 600);
+				}
+			}
+		}
+	}
+}

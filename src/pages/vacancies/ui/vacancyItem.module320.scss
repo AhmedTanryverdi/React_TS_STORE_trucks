@@ -1,0 +1,49 @@
+@import "../../../shared/styles/global.scss";
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.title {
+		height: 76px;
+		@include flexPosition(center, flex-start, column);
+		border: 1px solid $primaryBtnColor;
+		border-radius: 7px;
+		padding: 16px;
+
+		img {
+			position: absolute;
+			right: 24px;
+		}
+
+		span:first-child {
+			@include font(29px, 24px, 600);
+		}
+
+		span:last-child {
+			display: none;
+		}
+	}
+
+	.vacancyItem {
+		.btns {
+			@include flexPosition(center, center, column);
+			row-gap: 16px;
+
+			button {
+                width: 272px;
+				height: 44px;
+			}
+
+			button:first-child {
+                width: 272px;
+				background-color: $primaryBtnColor;
+				border: none;
+				border-radius: 5px;
+			}
+
+			button:last-child {
+				width: 272px;
+				border: 1px solid $primaryBtnColor;
+				border-radius: 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+@import "../../../shared/styles/global.scss";
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.cardNew {
+		width: 136px;
+		height: 239px;
+		border-radius: 4px;
+
+		.content {
+
+			img {
+				height: 88px;
+			}
+			
+
+			.title, .data {
+				width: 127px;
+				margin-left: 10px;
+			}
+
+			.title{
+				@include font(17px, 16px, 500); 
+			}
+
+			.data{
+				@include font(18px, 14px, 400); 
+			}
+
+			a {
+				left: 10px;
+			}
+		}
+	}
+}

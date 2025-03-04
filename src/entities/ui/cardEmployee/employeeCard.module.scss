@@ -1,0 +1,44 @@
+@import "../../../shared/styles/global.scss";
+
+.employeeCard {
+	width: 311px;
+}
+
+.row {
+	@include flexPosition(center, center, column);
+	row-gap: 20px;
+    text-align: center;
+    color: $primaryTextColor;
+    height: 400px;
+    padding: 24px;
+    @include font(20.8px, 16px, 400);
+    box-shadow: 0 0 2px 1px;
+    border-radius: 5px;
+}
+
+.colPerson {
+	img {
+		width: 140px;
+		height: 140px;
+	}
+
+    p{
+        width: 263px;
+
+        &:last-child{
+            opacity: 0.5;
+        }
+    }
+    .fullname{
+        @include font(28.8px, 24px, 500);
+    }
+}
+
+.colNumbers{
+    @include flexPosition(center, center, column);
+    row-gap: 3px;
+}
+
+
+@import  './employeeCard.module768.scss';
+@import  './employeeCard.module320.scss';

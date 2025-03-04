@@ -1,0 +1,82 @@
+@import "../../../../shared/styles/global.scss";
+
+.description {
+	width: 100%;
+
+	.container {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.content {
+		@include flexPosition(center, center);
+	}
+
+	.left {
+		width: 65%;
+		background-color: $primaryBtnColor;
+		@include flexPosition(center, flex-start, column);
+		row-gap: 16px;
+		padding: 56px 32px;
+		p {
+			width: 840px;
+		}
+
+		button {
+			border: none;
+			color: grey;
+			text-decoration: underline;
+			background-color: transparent;
+			@include font(21px, 16px, 500);
+			cursor: pointer;
+		}
+	}
+
+	.right {
+		width: 35%;
+		align-self: stretch;
+		box-shadow: 0px 0px 24px 0px #9696961f;
+		background: #000000;
+		color: #fff;
+		@include flexPosition(center, center);
+		ul {
+			@include flexPosition(center, flex-start, column);
+			row-gap: 16px;
+
+			li {
+				@include flexPosition(center, center);
+				column-gap: 16px;
+			}
+
+			li:first-child {
+				&::before {
+					content: url("../../../../shared/assets/icon/union.png");
+					width: 36px;
+					height: 36px;
+				}
+			}
+
+			li:nth-child(2) {
+				&::before {
+					content: url("../../../../shared/assets/icon/frame.png");
+					width: 36px;
+					height: 36px;
+				}
+			}
+
+			li:last-child {
+				&::before {
+					content: url("../../../../shared/assets/icon/frame2.png");
+					width: 36px;
+					height: 36px;
+				}
+			}
+		}
+
+        img{
+            margin-right: -80px;
+        }
+	}
+}
+
+@import './description.module768.scss';

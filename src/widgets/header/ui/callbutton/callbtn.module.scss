@@ -1,0 +1,15 @@
+@import '../../../../shared/styles/global.scss';
+
+.callbtn{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: $primaryBtnColor;
+    border: none;
+    @include flexPosition(center, center);
+    cursor: pointer;
+
+    .handset{
+        max-width: 52%;
+    }
+}

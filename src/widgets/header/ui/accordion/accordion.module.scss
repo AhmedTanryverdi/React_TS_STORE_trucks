@@ -1,0 +1,39 @@
+@import "../../../../shared/styles/global.scss";
+
+.accordion {
+	width: 100%;
+
+	.row {
+		width: 1320px;
+		margin: 15px auto;
+		background-color: #f9f9f9;
+		@include flexPosition(space-between, flex-start);
+		padding: 20px 10px;
+
+		.col {
+			.colTitle {
+				@include font(35px, 22px, 800);
+				margin-bottom: 16px;
+
+				img {
+					display: none;
+				}
+
+				a {
+					color: $primaryTextColor;
+				}
+			}
+
+			.category, .colItem {
+				@include flexPosition(flex-start, flex-start, column);
+				row-gap: 16px;
+				a{
+					color: $primaryTextColor;
+				}
+			}
+		}
+	}
+}
+
+@import "./accordion.module768.scss";
+@import "./accordion.module320.scss";

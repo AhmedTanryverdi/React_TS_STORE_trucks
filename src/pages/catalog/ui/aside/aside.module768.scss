@@ -1,0 +1,26 @@
+@import "../../../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.aside {
+		width: 322px;
+		position: relative;
+		padding: 0;
+
+		.form {
+			width: 312px;
+			@include flexPosition(center, center, column);
+			padding: 10px 0;
+			position: absolute;
+			z-index: 999;
+			background-color: #fff;
+			left: 0;
+			border: 1px solid $primaryBtnColor;
+
+			.price {
+				.inputPrice {
+					@include flexPosition(center, center);
+				}
+			}
+		}
+	}
+}

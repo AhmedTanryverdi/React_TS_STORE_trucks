@@ -1,0 +1,19 @@
+@import '../../../../shared/styles/global.scss';
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+
+    .container{
+        width: 100%;
+    }
+
+    .row{
+        width: 320px;
+        margin: 0 auto;
+        @include flexPosition(center,center, column);
+        row-gap: 40px;
+
+        .col{
+            width: 288px;
+        }
+    }
+}

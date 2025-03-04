@@ -1,0 +1,44 @@
+@import "../../../../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.col {
+		.colTitle {
+			@include font(35px, 22px, 800);
+			margin-bottom: 16px;
+
+			img {
+				display: none;
+			}
+
+			a {
+				color: $primaryTextColor;
+			}
+		}
+
+		.colItem {
+			position: absolute;
+			left: 230px;
+			top: 25px;
+
+			@include flexPosition(flex-start, flex-start, column);
+			row-gap: 16px;
+			a {
+				color: $primaryTextColor;
+			}
+		}
+
+		.col:last-child {
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -100%;
+				right: -80px;
+				height: 65vh;
+				width: 2px;
+				background-color: $primaryBtnColor;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@import '../../../../shared/styles/global.scss';
+
+.drawing{
+    width: 100%;
+    margin-top: 80px;
+    
+    .container{
+        width: 1320px;
+        margin: 0 auto;
+    }
+
+    .content{
+        @include flexPosition(center, center, column);
+        column-gap: 16px;
+        img{
+            width: 100%;
+            height: 569px;
+        }
+        .items{
+            img{
+                width: 88px;
+                height: 88px;
+            }
+        }
+    }
+}
+
+@import './drawing.module768.scss';

@@ -1,0 +1,30 @@
+@import "../../../shared/styles/global.scss";
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.employeeCard {
+		width: 288px;
+        height: 175px;
+	}
+
+    .row{
+        align-items: flex-start;
+        text-align: left;
+        padding: 16px 8px;
+        height: 175px;
+    }
+
+    .colPerson{
+
+        img{
+            display: none;
+        }
+
+        p{
+            width: 271px;
+        }
+    }
+
+    .row{
+        row-gap: 18px;
+    }
+}

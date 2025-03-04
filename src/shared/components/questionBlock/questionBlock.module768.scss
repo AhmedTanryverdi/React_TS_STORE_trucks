@@ -1,0 +1,15 @@
+@import "../../styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.questionBlock {
+
+		.container {
+			width: 768px;
+            padding-top: 56px;
+		}
+
+		img {
+			display: none;
+		}
+	}
+}

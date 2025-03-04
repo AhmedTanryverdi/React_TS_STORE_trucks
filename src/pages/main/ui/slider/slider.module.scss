@@ -1,0 +1,41 @@
+.slider {
+	width: 100%;
+	.container {
+		position: relative;
+	}
+
+	.row {
+		width: 100%;
+
+		.arrow1,
+		.arrow2 {
+			position: absolute;
+			width: 32px;
+			height: 32px;
+			top: calc(50% - 16px);
+			cursor: pointer;
+		}
+
+		.arrow1 {
+			left: 0;
+		}
+		.arrow2 {
+			right: 0;
+		}
+
+		.imageBlock {
+			width: 100%;
+			margin: 0 auto;
+
+			img {
+				width: 100%;
+				height: 536px;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+@import "./sliderMedia768.module.scss";
+@import "./sliderMedia320.module.scss";

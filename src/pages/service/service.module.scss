@@ -1,0 +1,81 @@
+@import "../../shared/styles/global.scss";
+
+.service {
+	width: 100%;
+
+    .container{
+		width: 1320px;
+		margin: 0 auto;
+    }
+
+	.home {
+        width: 100%;
+		position: relative;
+
+		.card {
+			position: absolute;
+			top: 125px;
+			right: 0;
+		}
+
+		.title {
+			@include font(38px, 32px 500);
+		}
+
+		.supportTitle {
+			@include font(28px, 24px 500);
+		}
+
+		.block {
+			.text {
+				width: 872px;
+				height: 135px;
+				@include font(27px, 18px 400);
+			}
+
+			.support {
+                @include flexPosition(flex-start, flex-start, column);
+				.supportItems {
+					margin-left: 32px;
+					margin-top: 32px;
+                    @include flexPosition(center, flex-start, column);
+					row-gap: 32px;
+					counter-reset: number;
+					list-style-position: inside;
+                    margin-bottom: 72px;
+
+					.item {
+                        @include flexPosition(center, center);
+                        column-gap: 20px;
+                        p{
+                            width: 840px;
+                        }
+					}
+
+					li::before {
+						counter-increment: number;
+						content: counter(number);
+						display: inline-block;
+						width: 38px;
+						height: 38px;
+						@include flexPosition(center, center);
+						background-color: $primaryBtnColor;
+						border-radius: 50%;
+					}
+				}
+
+                .paragraph{
+                    width: 872px;
+                    @include font(27px, 18px, 400);
+                }
+
+                .paragraph:last-child{
+                    margin-bottom: 120px;
+                }
+			}
+		}
+	}
+}
+
+@import './service.module768.scss';
+@import './service.module320.scss';

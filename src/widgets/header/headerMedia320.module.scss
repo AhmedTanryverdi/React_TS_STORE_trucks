@@ -1,0 +1,17 @@
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.container {
+		width: 320px;
+	}
+
+	.logoBlock .textLogo,
+	.logoBlock .line,
+	.navigate,
+	.graph,
+	.numbers {
+		display: none;
+	}
+
+    .headerFilter{
+        display: none;
+    }
+}

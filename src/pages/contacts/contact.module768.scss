@@ -1,0 +1,29 @@
+@import "../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+
+	.contact{
+		margin-top: 25px;
+	}
+
+	.container {
+		width: 768px;
+		margin: 0 auto;
+	}
+
+	.block {
+		margin: 0 auto;
+		.info {
+			width: 351px;
+			padding: 16px;
+			@include font(22px, 14px, 400);
+		}
+	}
+
+	.employees {
+		height: 900px;
+		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: 18px;
+		column-gap: 18px;
+	}
+}

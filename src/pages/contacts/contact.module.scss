@@ -1,0 +1,71 @@
+@import "../../shared/styles/global.scss";
+
+.contact {
+	width: 100%;
+	margin-top: 50px;
+}
+
+.container {
+	width: 1320px;
+	margin: 0 auto;
+}
+
+.row {
+	@include flexPosition(center, flex-start, column);
+}
+
+.contactMap {
+	h3 {
+		margin-top: 100px;
+		text-align: left;
+	}
+	
+	width: 100%;
+	@include flexPosition(flex-start, flex-start, column);
+	row-gap: 32px;
+
+	.contactTitle {
+		@include font(38.4px, 32px, 500);
+		color: $primaryTextColor;
+	}
+}
+
+.block {
+	@include flexPosition(flex-start, center);
+	width: 100%;
+	height: 417px;
+
+	.mapContainer {
+		width: 100%;
+		height: 100%;
+
+		.map {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.info {
+		width: 360px;
+		height: 100%;
+		padding: 28px;
+		background-color: $primaryBtnColor;
+		@include font(25px, 15px, 400);
+		@include flexPosition(flex-start, flex-start, column);
+		row-gap: 30px;
+
+		p {
+			@include flexPosition(flex-start, flex-start, column);
+		}
+	}
+}
+
+.employees {
+	margin: 20px auto;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 24px;
+}
+
+@import "./contact.module768.scss";
+@import "./contact.module320.scss";

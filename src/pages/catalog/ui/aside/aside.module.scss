@@ -1,0 +1,99 @@
+@import '../../../../shared/styles/global.scss';
+
+.aside {
+	width: 312px;
+	padding: 0 16px;
+
+	.form {
+		@include flexPosition(center, flex-start, column);
+		row-gap: 32px;
+
+		h3 {
+			@include font(20px, 18px, 600);
+			margin-bottom: 24px;
+		}
+
+		.block {
+			.input {
+				width: 280px;
+				height: 44px;
+				border-radius: 5px;
+				border: 1px solid grey;
+				padding: 10px;
+				@include font(20px, 16px, 400);
+			}
+
+			.checkboxList {
+
+				label:first-child{
+					margin-top: 150px;
+				}
+				height: 160px;
+				margin-top: 16px;
+				@include flexPosition(center, flex-start, column);
+				row-gap: 14px;
+				overflow: auto;
+
+				label {
+					@include flexPosition(center, center);
+					@include font(20px, 16px, 500);
+					column-gap: 8px;
+					input[type="checkbox"] {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+		}
+
+		.block2 {
+			width: 248px;
+			height: 55px;
+			@include flexPosition(space-around, flex-start, column);
+
+			.checkboxlist2 {
+				width: 100%;
+				@include flexPosition(space-around, center);
+
+				label {
+					@include flexPosition(center, center);
+					@include font(20px, 16px, 500);
+					column-gap: 8px;
+
+					input[type="checkbox"] {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+		}
+
+		.price {
+			.inputPrice {
+				@include flexPosition(space-between, center);
+				column-gap: 16px;
+				input {
+					width: 132px;
+					height: 44px;
+					padding: 11px;
+				}
+			}
+		}
+
+		button {
+			width: 280px;
+			height: 44px;
+			border: none;
+			border-radius: 5px;
+			background-color: $primaryBtnColor;
+			@include font(18px, 16px, 500);
+
+			&:active {
+				scale: 0.99;
+			}
+		}
+	}
+}
+
+@import './aside.module768.scss';
+@import './aside.module320.scss';

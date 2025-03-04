@@ -1,0 +1,46 @@
+@import '../../../../shared/styles/global.scss';
+
+.filter {
+	position: absolute;
+	right: 0;
+	@include flexPosition(center, center);
+	column-gap: 16px;
+
+	label {
+		width: 312px;
+		height: 36px;
+		@include flexPosition(flex-start, center);
+		border: 1px solid $primaryBtnColor;
+		border-radius: 10px;
+		padding: 4px 10px;
+		input {
+			flex: 1;
+			height: 100%;
+			border: none;
+			font-size: 16px;
+		}
+
+		img{
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.container {
+		width: 320px;
+	}
+
+	.logoBlock .textLogo,
+	.logoBlock .line,
+	.navigate,
+	.graph,
+	.numbers {
+		display: none;
+	}
+
+    .headerFilter{
+        display: none;
+    }
+}

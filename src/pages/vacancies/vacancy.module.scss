@@ -1,0 +1,25 @@
+@import "../../shared/styles/global.scss";
+
+.vacancy {
+	width: 100%;
+
+	.container {
+		width: 1320px;
+		margin: 0 auto;
+        
+
+		.title {
+			@include font(38px, 32px, 600);
+            margin-bottom: 32px;
+		}
+
+		.items {
+			width: 100%;
+			@include flexPosition(center, flex-start, column);
+			row-gap: 16px;
+		}
+	}
+}
+
+@import './vacancy.module768.scss';
+@import './vacancy.module320.scss';

@@ -1,0 +1,30 @@
+@import "../../../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.description {
+		width: 100%;
+
+		.container {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.content {
+			@include flexPosition(center, center);
+		}
+
+		.left {
+			width: 100%;
+			background-color: $primaryBtnColor;
+			@include flexPosition(center, flex-start, column);
+
+			p {
+				width: 720px;
+			}
+		}
+
+		.right {
+			display: none;
+		}
+	}
+}

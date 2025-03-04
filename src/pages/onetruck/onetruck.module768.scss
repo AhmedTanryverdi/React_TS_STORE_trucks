@@ -1,0 +1,102 @@
+@import "../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.oneTruck {
+		.container {
+			width: 768px;
+		}
+
+		.content {
+			.title {
+				@include font(38px, 32px, 600);
+			}
+
+			.row {
+				@include flexPosition(center, center, column);
+
+				.gallery {
+					@include flexPosition(flex-start, flex-start);
+					column-gap: 24px;
+
+					.imagesBlock {
+						@include flexPosition(center, center, column);
+						position: relative;
+
+						.arrow {
+							position: absolute;
+							bottom: -20px;
+							z-index: 999;
+						}
+
+						.listBlock {
+							height: 325px;
+							overflow: hidden;
+							.listImages {
+								position: relative;
+								li {
+									@include flexPosition(center, center);
+									row-gap: 8px;
+									padding: 3px;
+
+									img {
+										width: 86px;
+									}
+								}
+								@include flexPosition(
+									flex-start,
+									flex-start,
+									column
+								);
+							}
+						}
+					}
+
+					.mainImage {
+						width: 615px;
+						height: 489px;
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+
+				.aboutTruck {
+					width: 100%;
+					margin-top: 71px;
+
+					p {
+						span {
+							text-decoration: line-through;
+							opacity: 0.5;
+							margin-left: 10px;
+						}
+					}
+
+					.btns {
+						width: 100%;
+						@include flexPosition(space-between, center);
+						margin-top: 16px;
+
+						button {
+							height: 56px;
+							border-radius: 5px;
+						}
+
+						button:first-child {
+							width: 351px;
+							border: none;
+							background-color: $primaryBtnColor;
+						}
+
+						button:last-child {
+							width: 351px;
+							background-color: #fff;
+							border: 1px solid $primaryBtnColor;
+						}
+					}
+				}
+			}
+		}
+	}
+}

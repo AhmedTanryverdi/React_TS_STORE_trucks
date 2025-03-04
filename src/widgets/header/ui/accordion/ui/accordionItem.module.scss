@@ -1,0 +1,26 @@
+@import "../../../../../shared/styles/global.scss";
+.col {
+	.colTitle {
+		@include font(35px, 22px, 800);
+		margin-bottom: 16px;
+
+		img {
+			display: none;
+		}
+
+		a {
+			color: $primaryTextColor;
+		}
+	}
+
+	.colItem {
+		@include flexPosition(flex-start, flex-start, column);
+		row-gap: 16px;
+		a {
+			color: $primaryTextColor;
+		}
+	}
+}
+
+@import './accordionItem.module768.scss';
+@import './accordionItem.module320.scss'

@@ -1,0 +1,62 @@
+@import "../../shared/styles/global.scss";
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.service {
+		.container {
+			width: 320px;
+		}
+
+		.home {
+			height: 1650px;
+			.card {
+				top: 85%;
+			}
+
+			.block {
+				.text {
+					
+					width: 288px;
+					height: 360px;
+					margin-top: 32px;
+				}
+
+				.support {
+					width: 288px;
+					margin-top: 50px;
+					position: relative;
+					.supportItems {
+						width: 288px;
+						margin-left: 0;
+
+						.item {
+							width: 288px;
+
+							p{
+								width: 248px;
+							}
+
+							li::before {
+								counter-increment: number;
+								content: counter(number);
+								display: inline-block;
+								width: 32px;
+								height: 32px;
+								background-color: $primaryBtnColor;
+								border-radius: 50%;
+							}
+						}
+					}
+
+					.paragraph {
+						width: 288px;
+
+					}
+
+					.paragraph:last-child {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}

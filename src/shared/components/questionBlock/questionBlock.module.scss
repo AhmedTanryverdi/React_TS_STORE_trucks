@@ -1,0 +1,76 @@
+@import "../../styles/global.scss";
+
+
+
+.questionBlock {
+	width: 100%;
+    background-color: #F2F2F2;
+    margin-top: 120px;
+
+	.container {
+		width: 1320px;
+		margin: 0 auto;
+
+		@include flexPosition(space-between, center);
+	}
+
+	.left {
+        
+		.title {
+            @include flexPosition(center, center, column);
+			span:first-child {
+				@include font(50px, 42px, 600);
+			}
+			span:last-child {
+				@include font(27px, 18px, 500);
+			}
+		}
+
+        .form{
+            margin-top: 38px;
+            @include flexPosition(flex-start, flex-end);
+            column-gap: 19px;
+
+            label{
+                height: 80px;
+                p{
+                    margin-bottom: 4px;
+                }
+            }
+
+            input{
+                height: 44px;
+                @include font(15px, 14px, 400);
+                padding: 10px;
+            }
+
+            .input{
+                width: 294px;
+                border: 1px solid grey;
+                border-radius: 5px;
+                background-color: #F2F2F2;
+            }
+
+            .btn{
+                width: 140px;
+                border: none;
+                background-color: $primaryBtnColor;
+                @include font(18px, 16px, 500);
+            }
+        }
+
+        p{
+            margin-top: 17px;
+            @include font(16px, 14px, 400);
+            opacity: 0.5;   
+        }
+	}
+
+    img{
+        margin-top: -40px;
+        height: 427px;
+    }
+}
+
+@import './questionBlock.module768.scss';
+@import './questionBlock.module320.scss';

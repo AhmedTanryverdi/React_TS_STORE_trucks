@@ -1,0 +1,35 @@
+@import "../../shared/styles/global.scss";
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.catalog {
+		.container {
+			width: 320px;
+		}
+
+		.catalogTitle {
+			span {
+				display: none;
+			}
+		}
+
+		.content {
+			@include flexPosition(center, center, column);
+
+			.filterBtn {
+				display: inline-block;
+				width: 42px;
+				height: 42px;
+				align-self: flex-start;
+				border: none;
+				border-radius: 5px;
+				background-color: $primaryBtnColor;
+				@include font(20px, 18px, 500);
+				margin-bottom: 30px;
+
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+@import "../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.service {
+		.container {
+			width: 768px;
+		}
+
+		.home {
+			width: 100%;
+			.card {
+				top: 0;
+			}
+
+			.block {
+				.text {
+					width: 473px;
+					height: 243px;
+					margin-top: 50px;
+				}
+
+				.support {
+					width: 723px;
+					margin-top: 50px;
+					.supportItems {
+						margin-left: 0;
+						.item {
+							p {
+								width: 661px;
+							}
+						}
+					}
+
+					.paragraph {
+						width: 723px;
+					}
+				}
+			}
+		}
+	}
+}

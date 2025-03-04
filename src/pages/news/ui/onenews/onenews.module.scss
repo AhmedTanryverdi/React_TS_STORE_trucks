@@ -1,0 +1,73 @@
+@import "../../../../shared/styles/global.scss";
+
+.onenews {
+	width: 100%;
+
+	.container {
+		width: 1320px;
+		margin: 0 auto;
+		background-color: #f9f9f9;
+		padding-bottom: 200px;
+	}
+
+	.goBackBtn {
+		width: 79px;
+		height: 20px;
+		border: none;
+		background-color: transparent;
+		opacity: 0.5;
+		margin-top: 21px;
+		cursor: pointer;
+	}
+
+	.oneNewsTitle {
+		width: 100%;
+		margin-top: 22px;
+		@include flexPosition(center, flex-start, column);
+
+		span:first-child {
+			@include font(38px, 32px, 600);
+			color: $primaryTextColor;
+		}
+
+		span:last-child {
+			@include font(27px, 18px, 500);
+			margin-top: 12px;
+		}
+	}
+
+	.oneNewsBody {
+		margin-top: 40px;
+		@include flexPosition(space-between, center);
+		.innerbody p {
+			width: 648px;
+			@include font(27px, 18px, 500);
+		}
+
+		.img {
+			width: 648px;
+			height: 406px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+
+	.anotherNews {
+		margin-top: 160px;
+		@include flexPosition(flex-start, flex-start, column);
+		position: relative;
+
+		.items {
+			@include flexPosition(flex-start, center);
+			column-gap: 24px;
+			margin-top: 32px;
+		}
+	}
+}
+
+@import "./onenews.module768.scss";
+@import "./onenews.module320.scss";

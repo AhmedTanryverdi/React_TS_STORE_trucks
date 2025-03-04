@@ -1,0 +1,16 @@
+@import '../../../../../shared/styles/global.scss';
+
+.item {
+	width: 212px;
+	height: 120px;
+	@include flexPosition(flex-start, flex-start, column);
+	row-gap: 4px;
+	flex-wrap: wrap;
+	background-color: #fff;
+	a {
+		position: absolute;
+		bottom: 10px;
+		color: black;
+		opacity: 0.5;
+	}
+}

@@ -1,0 +1,60 @@
+@import "../../../../shared/styles/global.scss";
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.specifications {
+		width: 100%;
+		margin-top: 80px;
+
+		.container {
+			width: 768px;
+		}
+
+		.title {
+			@include flexPosition(space-between, center);
+			column-gap: 130px;
+
+			button {
+				width: 160px;
+				height: 42px;
+				border: none;
+				background-color: $primaryBtnColor;
+				border-radius: 5px;
+			}
+		}
+
+		.specificationsBody {
+			width: 100%;
+			height: 861px;
+			margin-top: 40px;
+			@include flexPosition(flex-start, center, column);
+			row-gap: 40px;
+			flex-wrap: nowrap;
+
+			.item{
+				width: 100%;
+			}
+
+			ul {
+				width: 100%;
+				margin-top: 14px;
+				padding-left: 5px;
+				@include flexPosition(flex-start, flex-start, column);
+				row-gap: 10px;
+
+				li {
+					width: 100%;
+					@include flexPosition(space-between, center);
+
+					span:nth-child(2) {
+						display: inline-block;
+						flex: 1;
+						border-bottom: 1px dotted black;
+						margin-bottom: -8px;
+						margin-left: 5px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+}

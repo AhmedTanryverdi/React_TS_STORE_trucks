@@ -1,0 +1,177 @@
+@import "../../shared/styles/global.scss";
+
+.header {
+	width: 100%;
+}
+
+.container {
+	width: 1320px;
+	margin: 0 auto;
+	position: relative;
+	padding: 12px 0;
+}
+
+.promo {
+	@include flexPosition(flex-start, center);
+	border-bottom: 2px solid $primaryBtnColor;
+	padding-bottom: 15px;
+}
+
+.logoBlock {
+	height: 44px;
+	@include flexPosition(flex-start, center);
+	column-gap: 10px;
+
+	.logoIcon {
+		width: 159px;
+		height: 100%;
+	}
+
+	.line {
+		height: 60%;
+		border: 2px solid $primaryBtnColor;
+	}
+
+	.textLogo {
+		@include font(15.4px, 14px, 400);
+	}
+}
+
+.graph {
+	@include flexPosition(center, flex-end, column);
+	text-align: right;
+	align-self: flex-end;
+	margin-left: 328px;
+	width: 262px;
+
+	.graphText {
+		@include flexPosition(center, center);
+		column-gap: 4px;
+	}
+
+	.time {
+		@include font(20.8px, 16px, 400);
+		@include flexPosition(center, center);
+		column-gap: 5px;
+		height: 21px;
+		color: $primaryTextColor;
+		position: relative;
+
+		.graphTime {
+			width: 250px;
+			padding: 10px;
+			position: absolute;
+			z-index: 20;
+			@include flexPosition(center, center, column);
+			top: 100%;
+			background-color: #fff;
+			border: 1px solid #000;
+			border-radius: 10px;
+			right: -2px;
+		}
+	}
+
+	.address {
+		@include font(16.5px, 15px, 400);
+		color: #a1a1a1;
+	}
+}
+
+.contacts {
+	@include font(16.5px, 15px, 400);
+	@include flexPosition(center, center);
+	column-gap: 24px;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	color: $primaryTextColor;
+
+	.numbers {
+		margin-top: 8px;
+		opacity: 0.5;
+	}
+}
+
+///////////////
+
+.headerBody {
+	padding: 5px 0;
+	margin-top: 20px;
+	@include flexPosition(flex-start, center);
+	position: relative;
+	.headerAccordion {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 200;
+	}
+}
+
+.catalogBtn {
+	width: 138px;
+	height: 42px;
+	border-radius: 4px;
+
+	border: none;
+	@include flexPosition(center, center);
+	column-gap: 10px;
+	background-color: $primaryBtnColor;
+
+	.burgerBlock {
+		width: 35%;
+		height: 24px;
+		@include flexPosition(space-around, center, column);
+
+		.line {
+			width: 18px;
+			height: 3px;
+			background-color: #000;
+		}
+	}
+	span {
+		width: 65%;
+		height: 100%;
+		@include font(19.8px, 18px, 400);
+		@include flexPosition(center, center);
+		align-self: stretch;
+		align-content: stretch;
+	}
+}
+
+.navigate {
+	height: 21px;
+	.menu {
+		margin-left: 41px;
+		@include flexPosition(flex-start, center);
+		column-gap: 32px;
+		.menuItem {
+			position: relative;
+			@include flexPosition(flex-start, center);
+			column-gap: 4px;
+		}
+
+		a {
+			color: $primaryTextColor;
+		}
+	}
+
+	.subMenu {
+		@include flexPosition(center, flex-start, column);
+		row-gap: 12px;
+		width: 240px;
+		background-color: #fff;
+		padding: 15px;
+		border: 1px solid grey;
+		border-radius: 5px;
+		position: absolute;
+		top: 100%;
+		z-index: 500;
+	}
+
+	.subMenu[data-dropdown="false"] {
+		display: none;
+	}
+}
+
+@import "./headerMedia768.module.scss";
+@import "./headerMedia320.module.scss";

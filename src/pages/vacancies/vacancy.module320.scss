@@ -1,0 +1,24 @@
+@import "../../shared/styles/global.scss";
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.vacancy {
+		width: 100%;
+
+		.container {
+			width: 320px;
+			margin: 0 auto;
+
+			.title {
+				width: 288px;
+				@include font(29px, 24px, 600);
+				margin-bottom: 32px;
+			}
+
+			.items {
+				width: 100%;
+				@include flexPosition(center, flex-start, column);
+				row-gap: 46px;
+			}
+		}
+	}
+}

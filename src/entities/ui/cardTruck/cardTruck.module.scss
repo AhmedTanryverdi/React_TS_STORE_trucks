@@ -1,0 +1,45 @@
+@import '../../../shared/styles/global.scss';
+
+.CardTruck{
+    width: 312px;
+    @include flexPosition(center, flex-start, column);
+    row-gap: 12px;
+    position: relative;
+
+    .favorite{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 30px;
+        height: 27px;
+        cursor: pointer;
+    }
+
+    img{
+        width: 100%;
+        height: 260px;
+    }
+
+    .model{
+        width: 288px;
+        @include font(22px, 18px, 500);
+    }
+
+    .price{
+        @include font(26px, 22px, 600);
+    }
+
+    .btn{
+        width: 144px;
+        height: 44px;
+        border: none;
+        background-color: $primaryBtnColor;
+        @include font(18px, 16px, 500);
+        color: $primaryTextColor;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+}
+
+@import './cardTruck.module768.scss';
+@import './cardTruck.module320.scss';

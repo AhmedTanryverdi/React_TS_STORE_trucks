@@ -1,0 +1,14 @@
+@media screen and (min-width: 768px) and (max-width: 1320px){
+	.container{
+		width: 768px;
+	}
+
+	.row{
+		width: 768px;
+		height: 700px;
+		padding-top: 100px;
+		background-position: 100px 400px;
+		@include flexPosition(flex-start, flex-start);
+		margin: 0 auto;
+	}
+}
