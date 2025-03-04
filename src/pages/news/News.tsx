@@ -15,7 +15,7 @@ export const News: React.FC = (): React.JSX.Element => {
 		dispatch(getNews("http://localhost:8000/news"));
 	}, []);
 
-	if (!news.length) {
+	if (!news?.length) {
 		return <h1>Загрузка...</h1>;
 	}
 
