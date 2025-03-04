@@ -18,7 +18,7 @@ export const Favorite: React.FC = (): React.JSX.Element => {
 			.then((data) => setLikeProducts(data));
 	}, []);
 
-	if (!favorite.length) {
+	if (!favorite?.length) {
 		return (
 			<h1 style={{ height: "100vh", width: "1320px", margin: "0 auto" }}>
 				Пусто

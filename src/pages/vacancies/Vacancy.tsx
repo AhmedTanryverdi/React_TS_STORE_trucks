@@ -15,7 +15,7 @@ export const Vacancy: React.FC = (): React.JSX.Element => {
 			});
 	}, []);
 
-	if (vacancies.length === 0) {
+	if (vacancies?.length === 0) {
 		return (
 			<h1
 				style={{

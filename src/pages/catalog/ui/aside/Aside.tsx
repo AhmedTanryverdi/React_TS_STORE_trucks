@@ -164,7 +164,7 @@ export const Aside: React.FC = (): React.JSX.Element => {
 				</div>
 
 				<button type="submit">
-					Показать товары ({products.length})
+					Показать товары ({products?.length})
 				</button>
 			</form>
 		</aside>

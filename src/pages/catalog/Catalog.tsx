@@ -28,15 +28,15 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 	}, []);
 
 	const countElmentsPage: number = 5;
-	const countPages: number = Math.ceil(trucks.length / countElmentsPage);
+	const countPages: number = Math.ceil(trucks?.length / countElmentsPage);
 
 	const [start, setStart] = React.useState<number>(0);
 	const currentTruckArr =
-		start + countElmentsPage < trucks.length
+		start + countElmentsPage < trucks?.length
 			? trucks.slice(start, start + countElmentsPage)
 			: trucks.slice(start);
 
-	if (!currentTruckArr.length) {
+	if (!currentTruckArr?.length) {
 		return (
 			<div style={{ display: "flex" }}>
 				<Aside />
@@ -48,7 +48,7 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 		<div className={style.catalog}>
 			<div className={style.container}>
 				<h2 className={style.catalogTitle}>
-					Найдено <span>{trucks.length} товаров</span>
+					Найдено <span>{trucks?.length} товаров</span>
 				</h2>
 				<div className={style.content}>
 					<button

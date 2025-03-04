@@ -27,7 +27,7 @@ export const OneNews: React.FC = (): React.JSX.Element => {
 			.then((data) => setAnotherNews(data));
 	}, [id]);
 
-	if (!oneNews.length) {
+	if (!oneNews?.length) {
 		return <h2>Загрузка...</h2>;
 	}
 
