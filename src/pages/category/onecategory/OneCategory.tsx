@@ -16,7 +16,7 @@ export const OneCategory: React.FC = (): React.JSX.Element => {
 
 	React.useEffect(() => {
 		dispatch(getTrucks(`http://localhost:8000/trucks/?category=${type}`));
-	}, [trucks]);
+	}, [type]);
 
 	if (!trucks.length) {
 		return <h1>{"Нет схожих товаров :("}</h1>;
