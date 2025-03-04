@@ -43,7 +43,7 @@ export const News: React.FC = (): React.JSX.Element => {
 					</div>
 				</div>
 				<div className={style.newCards}>
-					{news.slice(1).map((item, index) => {
+					{news?.slice(1).map((item, index) => {
 						return <CardNews key={index} {...item} />;
 					})}
 				</div>

@@ -33,8 +33,8 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 	const [start, setStart] = React.useState<number>(0);
 	const currentTruckArr =
 		start + countElmentsPage < trucks?.length
-			? trucks.slice(start, start + countElmentsPage)
-			: trucks.slice(start);
+			? trucks?.slice(start, start + countElmentsPage)
+			: trucks?.slice(start);
 
 	if (!currentTruckArr?.length) {
 		return (
