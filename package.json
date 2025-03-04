@@ -2,7 +2,6 @@
 	"name": "rustrak-app",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://AhmedTanryverdi.github.io/React_TS_STORE_trucks",
 	"dependencies": {
 		"-": "^0.0.1",
 		"@pbe/react-yandex-maps": "^1.2.5",
