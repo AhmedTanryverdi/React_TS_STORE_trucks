@@ -35,7 +35,7 @@ const truckSlice = createSlice({
 	extraReducers: (builder) => {
 		builder.addCase(getTrucks.fulfilled, (state, actions) => {
 			state.trucks = actions.payload as TruckType[];
-			//state.status = "fulfilled";
+			state.status = "fulfilled";
 		});
 
 		builder.addCase(getTrucks.rejected, (state, actions) => {
