@@ -9,12 +9,19 @@ import { Pagination } from "../../features/index";
 import { QuestionBlock } from "../../shared/components/index";
 import { Aside } from "./ui/aside/Aside";
 import { setCatalog } from "../../entities/index";
+import { Error } from "../../shared/components/error/Error";
+import { Skeleton } from "../../shared/components/skeleton/Skeleton";
 
 export const Catalog: React.FC = (): React.JSX.Element => {
 	const dispatch = useAppDispatch();
 	const trucks = useSelector<RootState, TruckType[]>(
 		(state) => state.trucks.trucks
 	);
+
+	const status = useSelector<RootState, string>(
+		(state) => state.trucks.status
+	);
+
 	const isCatalog = useSelector<RootState, boolean>(
 		(state) => state.filter.isCatalog
 	);
@@ -36,11 +43,25 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 			? trucks?.slice(start, start + countElmentsPage)
 			: trucks?.slice(start);
 
-	if (!currentTruckArr?.length) {
+	if (status === "pending") {
 		return (
-			<div style={{ display: "flex" }}>
-				<Aside />
-				<h1>{"Не получилось загрузить товары :("}</h1>
+			<div className={style.pending}>
+				<div className={style.container}>
+					<h2 className={style.title}>Идет загрузка</h2>
+					<div className={style.content}>
+						{Array.from({ length: 12 }, (_, i) => i).map(
+							(_, index) => {
+								return <Skeleton key={index} />;
+							}
+						)}
+					</div>
+				</div>
+			</div>
+		);
+	} else if (status === "rejected") {
+		return (
+			<div className={style.error}>
+				<Error />
 			</div>
 		);
 	}
@@ -67,7 +88,7 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 					{isCatalog && <Aside />}
 
 					<div className={style.cardBlock}>
-						{currentTruckArr.map((item, index) => {
+						{currentTruckArr?.map((item, index) => {
 							return <CardTruck key={index} {...item} />;
 						})}
 					</div>

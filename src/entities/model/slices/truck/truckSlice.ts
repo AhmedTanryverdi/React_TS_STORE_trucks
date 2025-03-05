@@ -3,22 +3,27 @@ import { TruckType } from "../../../../shared/types";
 
 export const getTrucks = createAsyncThunk(
 	"getTrucks/truckSlice",
-	async (url: string): Promise<TruckType[] | unknown> => {
-		try {
-			const response = await fetch(url);
+	async (
+		url: string,
+		{ rejectWithValue }
+	): Promise<TruckType[] | unknown> => {
+		const response = await fetch(url);
 
-			if (!response.ok) {
-				throw new Error("error");
-			}
+		if (!response.ok) {
+			return rejectWithValue(response.status);
+		}
 
-			return response.json();
-		} catch (error) {}
+		return response.json();
 	}
 );
 
 const initialState: {
+	error: number;
+	status: string;
 	trucks: TruckType[];
 } = {
+	error: 200,
+	status: "",
 	trucks: [],
 };
 
@@ -30,7 +35,17 @@ const truckSlice = createSlice({
 	extraReducers: (builder) => {
 		builder.addCase(getTrucks.fulfilled, (state, actions) => {
 			state.trucks = actions.payload as TruckType[];
+			//state.status = "fulfilled";
 		});
+
+		builder.addCase(getTrucks.rejected, (state, actions) => {
+			state.error = actions.payload as number;
+			state.status = "rejected";
+		});
+
+		builder.addCase(getTrucks.pending, (state)=>{
+			state.status = "pending";
+		})
 	},
 });
 

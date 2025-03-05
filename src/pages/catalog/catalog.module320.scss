@@ -32,4 +32,17 @@
 			}
 		}
 	}
+
+	.pending {
+		width: 100%;
+		padding-bottom: 30px;
+
+		.container {
+			width: 320px;
+		}
+
+		.tile {
+			padding: 10px 0;
+		}
+	}
 }
