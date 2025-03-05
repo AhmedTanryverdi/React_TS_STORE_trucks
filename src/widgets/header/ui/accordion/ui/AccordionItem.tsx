@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../../../../../app/redux/store";
 import { setAccordion } from "../../../../../entities/index";
 
-
 export const AccordionItem: React.FC<{
 	innerItem: {
 		title: string;
@@ -66,10 +65,13 @@ export const AccordionItem: React.FC<{
 							<Link
 								key={index}
 								to={
-									Object.keys(item)[0] !== "allcategories"
-										? `/allcategories/${
-												Object.values(item)[0]
-										  }`
+									title === "Категории"
+										? Object.keys(item)[0] ===
+										  "allcategories"
+											? Object.keys(item)[0]
+											: `/allcategories/${
+													Object.values(item)[0]
+											  }`
 										: Object.keys(item)[0]
 								}
 								onClick={() => onChangeAccordion(isAccordion)}
