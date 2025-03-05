@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./service.module.scss";
 import { EmployeeCard } from "../../entities/ui/cardEmployee/EmployeeCard";
+import { QuestionBlock } from "../../shared/components";
 
 export const Service: React.FC = (): React.JSX.Element => {
 	return (
@@ -81,6 +82,7 @@ export const Service: React.FC = (): React.JSX.Element => {
 					</div>
 				</div>
 			</div>
+			<QuestionBlock />
 		</div>
 	);
 };

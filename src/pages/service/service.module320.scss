@@ -4,13 +4,15 @@
 	.service {
 		.container {
 			width: 320px;
-			height: 1700px;
 		}
 
 		.home {
+			position: relative;
+			padding-bottom: 150px;
+
 			.card {
-				top: 1450px;
 				right: 18px;
+				top: 1400px;
 			}
 
 			.block {
@@ -23,7 +25,7 @@
 				.support {
 					width: 288px;
 					margin-top: 50px;
-					position: relative;
+					//position: relative;
 					.supportItems {
 						width: 288px;
 						margin-left: 0;

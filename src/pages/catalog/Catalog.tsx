@@ -102,9 +102,8 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 						setStart={setStart}
 					/>
 				</div>
-
-				<QuestionBlock />
 			</div>
+			<QuestionBlock />
 		</div>
 	);
 };
