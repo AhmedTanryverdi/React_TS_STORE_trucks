@@ -1,9 +1,35 @@
-@import '../../styles/global.scss';
+@import "../../styles/global.scss";
 
-.listLink{
-    @include flexPosition(flex-start, flex-start, column);
-    @include font(15.4px, 14px, 400);
-    color: #fff;
-    opacity: 0.5;
-    row-gap: 13px;
+.listLink {
+	@include flexPosition(flex-start, flex-start, column);
+	@include font(15.4px, 14px, 400);
+	color: #fff;
+	row-gap: 13px;
+
+	.title {
+		@include flexPosition(flex-start, center);
+		column-gap: 5px;
+		h3 {
+			opacity: 0.6;
+		}
+		img {
+			display: none;
+		}
+	}
+
+	.title[data-drop="false"] + ul {
+		display: none;
+	}
+	.title[data-drop="true"] + ul {
+		display: flex;
+        flex-direction: column;
+	}
+
+	ul {
+		opacity: 0.6;
+		row-gap: 8px;
+		li {
+			margin-top: 10px;
+		}
+	}
 }
