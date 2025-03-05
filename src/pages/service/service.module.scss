@@ -6,11 +6,12 @@
     .container{
 		width: 1320px;
 		margin: 0 auto;
+		position: relative;
     }
 
 	.home {
         width: 100%;
-		position: relative;
+		
 
 		.card {
 			position: absolute;

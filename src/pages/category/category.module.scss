@@ -2,6 +2,7 @@
 
 .categoty {
 	width: 100%;
+    
 
 	.container {
 		width: 1320px;
@@ -15,12 +16,14 @@
 		gap: 24px;
 
 		.categoryItem {
+            width: 312px;
 			transition: 0.3s;
 			padding: 15px;
+            
 		}
 		.categoryItem:hover {
 			transform: translateY(-10px);
-			box-shadow: 0px 2px 3px $primaryBtnColor;
+            box-shadow: 0 0 1em grey;
 			cursor: pointer;
 		}
 	}
@@ -36,18 +39,15 @@
 
 		.row {
 			margin-top: 22px;
-			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
 			gap: 18px;
 
 			.categoryItem {
-				transition: 0.3s;
+                width: 260px;
 				padding: 8px;
 			}
 			.categoryItem:hover {
-				transform: translateY(-10px);
-				box-shadow: 0px 2px 3px $primaryBtnColor;
-				cursor: pointer;
+				transform: translateY(-8px);
 			}
 		}
 	}
@@ -63,18 +63,29 @@
 
 		.row {
 			margin-top: 14px;
-			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 14px;
 
 			.categoryItem {
-				transition: 0.3s;
+                width: 160px;
 				padding: 6px;
+                
+                
+                .inner{
+                    width: 100%;
+                    h3{
+                        width: 100%;
+                        font-size: 16px;
+                        overflow-wrap: break-word;
+                    }
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
 			}
 			.categoryItem:hover {
 				transform: translateY(-6px);
-				box-shadow: 0px 2px 3px $primaryBtnColor;
-				cursor: pointer;
 			}
 		}
 	}

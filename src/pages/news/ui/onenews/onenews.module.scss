@@ -63,8 +63,9 @@
 
 		.items {
 			@include flexPosition(flex-start, center);
+			flex-wrap: wrap;
 			column-gap: 24px;
-			margin-top: 32px;
+			margin-top: 42px;
 		}
 	}
 }

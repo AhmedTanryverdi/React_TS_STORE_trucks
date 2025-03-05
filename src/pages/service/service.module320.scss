@@ -4,17 +4,17 @@
 	.service {
 		.container {
 			width: 320px;
+			height: 1700px;
 		}
 
 		.home {
-			height: 1650px;
 			.card {
-				top: 85%;
+				top: 1450px;
+				right: 18px;
 			}
 
 			.block {
 				.text {
-					
 					width: 288px;
 					height: 360px;
 					margin-top: 32px;
@@ -31,7 +31,7 @@
 						.item {
 							width: 288px;
 
-							p{
+							p {
 								width: 248px;
 							}
 
@@ -49,7 +49,6 @@
 
 					.paragraph {
 						width: 288px;
-
 					}
 
 					.paragraph:last-child {
