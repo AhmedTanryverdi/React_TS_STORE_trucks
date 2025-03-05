@@ -61,6 +61,7 @@ export const Contact: React.FC = (): React.JSX.Element => {
 									</p>
 								</div>
 							</div>
+
 							<div className={style.mapContainer}>
 								<YMaps query={{ lang: "en_RU" }}>
 									<Map
@@ -82,21 +83,23 @@ export const Contact: React.FC = (): React.JSX.Element => {
 						</div>
 					</div>
 					<h3>Сотрудники</h3>
-					<div className={style.employees}>
-						{employees.map((item, index) => {
-							return (
-								<EmployeeCard
-									key={index}
-									secondName={item.secondName}
-									firstName={item.firstName}
-									post={item.post}
-									numbers={item.numbers}
-									email={item.email}
-									image={item.image}
-									id={item.id}
-								/>
-							);
-						})}
+					<div>
+						<div className={style.employees}>
+							{employees.map((item, index) => {
+								return (
+									<EmployeeCard
+										key={index}
+										secondName={item.secondName}
+										firstName={item.firstName}
+										post={item.post}
+										numbers={item.numbers}
+										email={item.email}
+										image={item.image}
+										id={item.id}
+									/>
+								);
+							})}
+						</div>
 					</div>
 				</div>
 			</div>

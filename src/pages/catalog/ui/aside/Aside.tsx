@@ -69,7 +69,6 @@ export const Aside: React.FC = (): React.JSX.Element => {
 			<form action={formAction} className={style.form}>
 				<div className={style.block}>
 					<h3>Название фильтра 1</h3>
-
 					<div>
 						<input
 							type="text"
@@ -77,28 +76,23 @@ export const Aside: React.FC = (): React.JSX.Element => {
 							placeholder="Найти"
 						/>
 					</div>
-
 					<div className={style.checkboxList}>
-						
-							{asideItems.map((item: Object, index: number) => {
-								const key: string = Object.keys(item)[0];
-								const value: string = Object.values(item)[0];
-								return (
-									<label key={index}>
-										<input
-											type="checkbox"
-											name={key}
-											checked={
-												Object.values(aside)[index]
-											}
-											value={value}
-											onChange={handleCheckboxChange}
-										/>
-										<p>{value}</p>
-									</label>
-								);
-							})}
-						
+						{asideItems.map((item: Object, index: number) => {
+							const key: string = Object.keys(item)[0];
+							const value: string = Object.values(item)[0];
+							return (
+								<label key={index}>
+									<input
+										type="checkbox"
+										name={key}
+										checked={Object.values(aside)[index]}
+										value={value}
+										onChange={handleCheckboxChange}
+									/>
+									<p>{value}</p>
+								</label>
+							);
+						})}
 					</div>
 				</div>
 
