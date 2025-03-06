@@ -3,7 +3,7 @@ export const MENU = [
 		title: "О нас",
 		subMenu: [
 			{
-				path: "about",
+				path: "aboutCompany",
 				title: "О компании ООО «Рустрак»",
 			},
 			{
