@@ -32,6 +32,7 @@
 	.home {
 		@include flexPosition(flex-start, flex-start);
 		padding: 123px 0;
+        position: relative;
 
 		.left {
 			h2 {
@@ -173,7 +174,7 @@
 				width: 374px;
 				color: #fff;
 				@include font(80%, 18px, 600);
-				margin-left: 30px;
+				margin-left: 15px;
 				margin-top: 45px;
 			}
 		}
