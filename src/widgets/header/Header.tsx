@@ -36,7 +36,7 @@ export const Header: React.FC = (): React.JSX.Element => {
 		if (!(e.target instanceof HTMLParagraphElement)) {
 			setOpenTime(false);
 		}
-
+		
 		if (e.target.parentNode instanceof HTMLLIElement) {
 			const media = document.querySelector(".media");
 			if (e.target.parentNode.className.includes("about")) {

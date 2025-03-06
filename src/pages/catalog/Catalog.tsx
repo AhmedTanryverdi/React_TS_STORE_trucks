@@ -28,7 +28,7 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 	);
 
 	React.useEffect(() => {
-		dispatch(getTrucks("http://localhost:8000/trucks"));
+		dispatch(getTrucks("http://localhost:8000/trucks1"));
 
 		if (window.innerWidth < 1320) {
 			dispatch(setCatalog(false));

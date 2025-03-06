@@ -7,13 +7,19 @@ export const getTrucks = createAsyncThunk(
 		url: string,
 		{ rejectWithValue }
 	): Promise<TruckType[] | unknown> => {
-		const response = await fetch(url);
+		try {
+			const response = await fetch(url);
 
-		if (!response.ok) {
-			return rejectWithValue(response.status);
+			if(!response.ok){
+				return rejectWithValue(response.status);
+			}
+
+			return await response.json();
+
+		} catch (error) {
+
+			return rejectWithValue(500);
 		}
-
-		return response.json();
 	}
 );
 

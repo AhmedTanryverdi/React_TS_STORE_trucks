@@ -6,10 +6,18 @@ import { EmployeeType } from "../../shared/types";
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../../app/redux/store";
 import { getEmployees } from "../../entities/model/slices/employee/employeeSlice";
+import { Error } from "../../shared/components/error/Error";
 
 export const Contact: React.FC = (): React.JSX.Element => {
 	const employees = useSelector<RootState, EmployeeType[]>(
 		(state) => state.emloyees.employees
+	);
+
+	const status = useSelector<RootState, string>(
+		(state) => state.emloyees.status
+	);
+	const error = useSelector<RootState, number>(
+		(state) => state.emloyees.error
 	);
 
 	const dispatch = useAppDispatch();
@@ -22,6 +30,18 @@ export const Contact: React.FC = (): React.JSX.Element => {
 			getEmployees({ url: "http://localhost:8000/employees", signal })
 		);
 	}, []);
+
+	if(status === 'pending'){
+		return (
+			<div className={style.pending}>
+				<h1 className={style.title}>Загрузка</h1>
+			</div>
+		);
+	}
+
+	else if(status === "error"){
+		<Error error={error} />
+	}
 
 	return (
 		<div className={style.contact}>

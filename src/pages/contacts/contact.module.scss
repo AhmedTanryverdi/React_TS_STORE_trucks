@@ -12,14 +12,13 @@
 
 .row {
 	@include flexPosition(center, flex-start, column);
-}
-
-.contactMap {
 	h3 {
 		margin-top: 100px;
 		text-align: left;
 	}
-	
+}
+
+.contactMap {
 	width: 100%;
 	@include flexPosition(flex-start, flex-start, column);
 	row-gap: 32px;
@@ -65,6 +64,32 @@
 	justify-content: center;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 24px;
+}
+
+.pending {
+
+	.title{
+		padding: 15px 0;
+	}
+	
+	.title::after {
+		content: ".";
+		animation: title 0.8s linear alternate infinite;
+	}
+}
+
+@keyframes title {
+	0% {
+		content: ".";
+	}
+
+	50% {
+		content: "..";
+	}
+
+	100% {
+		content: "...";
+	}
 }
 
 @import "./contact.module768.scss";
