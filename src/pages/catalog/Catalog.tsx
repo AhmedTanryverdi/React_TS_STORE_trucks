@@ -21,6 +21,7 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 	const status = useSelector<RootState, string>(
 		(state) => state.trucks.status
 	);
+	const error = useSelector<RootState, number>((state) => state.trucks.error);
 
 	const isCatalog = useSelector<RootState, boolean>(
 		(state) => state.filter.isCatalog
@@ -38,6 +39,7 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 	const countPages: number = Math.ceil(trucks?.length / countElmentsPage);
 
 	const [start, setStart] = React.useState<number>(0);
+
 	const currentTruckArr =
 		start + countElmentsPage < trucks?.length
 			? trucks?.slice(start, start + countElmentsPage)
@@ -61,7 +63,7 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 	} else if (status === "rejected") {
 		return (
 			<div className={style.error}>
-				<Error />
+				<Error error={error} />
 			</div>
 		);
 	}

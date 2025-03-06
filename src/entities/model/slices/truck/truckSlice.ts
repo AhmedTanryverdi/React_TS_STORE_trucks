@@ -43,9 +43,9 @@ const truckSlice = createSlice({
 			state.status = "rejected";
 		});
 
-		builder.addCase(getTrucks.pending, (state)=>{
+		builder.addCase(getTrucks.pending, (state) => {
 			state.status = "pending";
-		})
+		});
 	},
 });
 

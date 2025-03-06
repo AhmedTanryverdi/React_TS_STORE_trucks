@@ -3,24 +3,22 @@ import { NewType } from "../../../../shared/types";
 
 export const getNews = createAsyncThunk(
 	"getNews/newSlice",
-	async (url: string): Promise<NewType[] | unknown> => {
-		try {
-			const response = await fetch(url);
-
-			if (!response.ok) {
-				throw new Error("error");
-			}
-
-			return response.json();
-		} catch (error) {
-			console.log(error);
+	async (url: string, { rejectWithValue }): Promise<NewType[] | unknown> => {
+		const response = await fetch(url);
+		if (!response.ok) {
+			return rejectWithValue(response.status);
 		}
+		return response.json();
 	}
 );
 
 const initialState: {
+	error: number;
+	status: string;
 	news: NewType[];
 } = {
+	error: 200,
+	status: "",
 	news: [],
 };
 
@@ -36,6 +34,17 @@ const newsSlice = createSlice({
 	extraReducers: (builder) => {
 		builder.addCase(getNews.fulfilled, (state, actions) => {
 			state.news = actions.payload as NewType[];
+			//state.status = "fulfilled";
+		});
+
+		builder.addCase(getNews.rejected, (state, actions) => {
+			state.error = actions.payload as number;
+			state.status = "rejected";
+			console.log("[error]: ", state.error)
+		});
+
+		builder.addCase(getNews.pending, (state) => {
+			state.status = "pending";
 		});
 	},
 });

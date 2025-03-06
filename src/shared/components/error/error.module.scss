@@ -50,11 +50,13 @@
 	.error {
 		.container {
 			width: 320px;
+			background-color: aqua;
 		}
 
 		.content {
 			margin-top: 30px;
 			padding-bottom: 50px;
+			
 			p:first-child {
 				@include font(40px, 30px, 600);
 				color: grey;

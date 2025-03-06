@@ -3,8 +3,12 @@ import style from "./error.module.scss";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../app/redux/store";
 
-export const Error: React.FC = ({}): React.JSX.Element => {
-    const error = useSelector<RootState, number>((state) => state.trucks.error);
+export const Error: React.FC<{ error: number }> = ({
+	error,
+}: {
+	error: number;
+}): React.JSX.Element => {
+	
 	return (
 		<div className={style.error}>
 			<div className={style.container}>

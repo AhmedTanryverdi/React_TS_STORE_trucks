@@ -60,9 +60,6 @@
 	}
 }
 
-@import "./catalog.module768.scss";
-@import "./catalog.module320.scss";
-
 @keyframes title {
 	0% {
 		content: ".";
@@ -76,3 +73,8 @@
 		content: "...";
 	}
 }
+
+@import "./catalog.module768.scss";
+@import "./catalog.module320.scss";
+
+
