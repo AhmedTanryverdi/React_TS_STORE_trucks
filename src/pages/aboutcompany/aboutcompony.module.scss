@@ -210,6 +210,7 @@
 			margin: 0 auto;
 			position: static;
 			.inner {
+                width: 320px;
 				position: static;
 				h3 {
 					@include font(80%, 18px, 600);
