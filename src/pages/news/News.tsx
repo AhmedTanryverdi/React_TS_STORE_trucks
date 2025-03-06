@@ -21,8 +21,6 @@ export const News: React.FC = (): React.JSX.Element => {
 		dispatch(getNews("http://localhost:8000/news"));
 	}, []);
 
-	console.log("[status]: ", status);
-
 	if (status === "pending") {
 		return (
 			<div className={style.pending}>

@@ -1,0 +1,63 @@
+@import "../../shared/styles/global.scss";
+
+.credit {
+	width: 100%;
+
+	.container {
+		width: 1320px;
+		margin: 0 auto;
+	}
+
+	.content {
+		margin-top: 24px;
+		@include flexPosition(flex-start, flex-start, column);
+		row-gap: 72px;
+
+		section {
+			width: 984px;
+
+			.title {
+				@include font(120%, 24px, 600);
+			}
+			.paragraph {
+				margin-top: 16px;
+				@include font(150%, 18px, 500);
+			}
+
+			&:nth-child(4) {
+				ul {
+					margin-top: 36px;
+					list-style-position: inside;
+					counter-reset: number;
+					@include flexPosition(flex-start, flex-start, column);
+					row-gap: 24px;
+
+					li {
+						h3 {
+							display: flex;
+							@include font(120%, 22px, 600);
+							margin-bottom: 8px;
+						}
+
+						p {
+							margin-left: 50px;
+						}
+						h3::before {
+							counter-increment: number;
+							content: counter(number);
+							@include flexPosition(center, center);
+							width: 30px;
+							height: 30px;
+							margin-right: 20px;
+							background-color: $primaryBtnColor;
+							border-radius: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@import "./credit.module768.scss";
+@import "./credit.module320.scss";

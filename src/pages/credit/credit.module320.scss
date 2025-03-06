@@ -1,0 +1,17 @@
+@import "../../shared/styles/global.scss";
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.credit {
+		.container {
+			width: 320px;
+		}
+
+		.content {
+			row-gap: 56px;
+
+			section {
+				width: 289px;
+			}
+		}
+	}
+}

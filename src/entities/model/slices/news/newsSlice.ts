@@ -34,13 +34,12 @@ const newsSlice = createSlice({
 	extraReducers: (builder) => {
 		builder.addCase(getNews.fulfilled, (state, actions) => {
 			state.news = actions.payload as NewType[];
-			//state.status = "fulfilled";
+			state.status = "fulfilled";
 		});
 
 		builder.addCase(getNews.rejected, (state, actions) => {
 			state.error = actions.payload as number;
 			state.status = "rejected";
-			console.log("[error]: ", state.error)
 		});
 
 		builder.addCase(getNews.pending, (state) => {
