@@ -31,10 +31,12 @@
 
 	.home {
 		@include flexPosition(flex-start, flex-start);
-		position: relative;
 		padding: 123px 0;
 
 		.left {
+			h2 {
+				@include font(120%, 42px, 600);
+			}
 			.list {
 				display: flex;
 				column-gap: 44px;
@@ -112,6 +114,9 @@
 			padding: 80px 20px;
 
 			.left {
+				h2 {
+					@include font(60%, 21px, 600);
+				}
 				.list {
 					display: inline-block;
 				}
@@ -174,11 +179,19 @@
 		}
 
 		.home {
-			padding: 40px 10px;
-
 			.left {
 				.list {
 					display: inline-block;
+
+					ul {
+						width: 320px;
+						li::before {
+							content: url("../../shared/assets/icon/ellipse.png");
+							width: 30px;
+							height: 30px;
+							margin-right: 12px;
+						}
+					}
 				}
 			}
 
