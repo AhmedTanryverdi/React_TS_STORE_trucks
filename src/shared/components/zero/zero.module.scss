@@ -6,13 +6,14 @@
 	.container {
 		width: 1320px;
 		margin: 0 auto;
-        @include flexPosition(center, center, column);
-        row-gap: 12px;
-        color: grey;
-        img{
-            width: 60px;
-            height: 60px;
-        }
+		@include flexPosition(center, center, column);
+		row-gap: 12px;
+		color: grey;
+		img {
+			width: 60px;
+			height: 60px;
+			margin-bottom: 40px;
+		}
 	}
 }
 
@@ -20,6 +21,10 @@
 	.zero {
 		.container {
 			width: 768px;
+
+			img {
+				margin-bottom: 30px;
+			}
 		}
 	}
 }
@@ -28,6 +33,9 @@
 	.zero {
 		.container {
 			width: 320px;
+			img {
+				margin-bottom: 20px;
+			}
 		}
 	}
 }

@@ -23,8 +23,7 @@ export const OneCategory: React.FC = (): React.JSX.Element => {
 	);
 
 	React.useEffect(() => {
-		dispatch(getTrucks(`http://localhost:8000/trucks/?category=${type}1`));
-		console.log("[status]:", status);
+		dispatch(getTrucks(`http://localhost:8000/trucks/?category=${type}`));
 	}, [type]);
 
 	if (status === "pending") {
@@ -34,7 +33,13 @@ export const OneCategory: React.FC = (): React.JSX.Element => {
 	}
 
 	if(!trucks.length){
-		return <Zero />
+
+		return (
+			<div className={style.zero}>
+				<h1 className={style.title}>{type}</h1>
+				<Zero />
+			</div>
+		);		
 	}
 
 	return (
