@@ -5,6 +5,8 @@ import trolley from "../../../../shared/assets/icon/icon_normal_trolley.svg";
 import favorite from "../../../../shared/assets/icon/icon_normal_fav.svg";
 import { useNavigate } from "react-router-dom";
 import style from "./filter.module.scss";
+import { getTrucks, setInputText } from "../../../../entities";
+import { useAppDispatch } from "../../../../app/redux/store";
 
 export const Fiter: React.FC = (): React.JSX.Element => {
 	const ref = React.useRef<HTMLInputElement>(null);
@@ -12,6 +14,7 @@ export const Fiter: React.FC = (): React.JSX.Element => {
 
 	const [searchValue, setSearchValue] = React.useState("");
 
+	const dispatch = useAppDispatch();
 	const updateSearch = React.useCallback(
 		debounce((value) => {
 			setSearchValue(value);
@@ -41,6 +44,10 @@ export const Fiter: React.FC = (): React.JSX.Element => {
 				src: loopIcon,
 				alt: "loop",
 		  };
+
+	React.useEffect(() => {
+		dispatch(setInputText(searchValue));
+	}, [searchValue]);
 
 	return (
 		<div className={style.filter}>

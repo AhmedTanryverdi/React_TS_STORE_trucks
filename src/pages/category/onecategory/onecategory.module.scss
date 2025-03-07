@@ -6,10 +6,15 @@
 	.container {
 		width: 1320px;
 		margin: 0 auto;
+
+		h2{
+			margin-top: 32px;
+			margin-bottom: 32px;
+		}
 	}
 
 	.row {
-		margin-top: 32px;
+		
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 24px;

@@ -25,6 +25,7 @@ export const OneCategory: React.FC = (): React.JSX.Element => {
 	return (
 		<div className={style.categoryProduct}>
 			<div className={style.container}>
+				<h2>{type}</h2>
 				<div className={style.row}>
 					{trucks.map((item, index) => {
 						return <CardTruck key={index} {...item} />;

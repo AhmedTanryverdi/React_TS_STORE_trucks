@@ -27,13 +27,17 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 		(state) => state.filter.isCatalog
 	);
 
+	const inputText = useSelector<RootState, string>(
+		(state) => state.filter.inputText
+	);
+
 	React.useEffect(() => {
-		dispatch(getTrucks("http://localhost:8000/trucks1"));
+		dispatch(getTrucks(`http://localhost:8000/trucks/?q=${inputText}`));
 
 		if (window.innerWidth < 1320) {
 			dispatch(setCatalog(false));
 		}
-	}, []);
+	}, [inputText]);
 
 	const countElmentsPage: number = 5;
 	const countPages: number = Math.ceil(trucks?.length / countElmentsPage);
