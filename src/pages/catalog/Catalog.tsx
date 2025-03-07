@@ -6,11 +6,9 @@ import { TruckType } from "../../shared/types";
 import { getTrucks } from "../../entities/index";
 import { CardTruck } from "../../entities/index";
 import { Pagination } from "../../features/index";
-import { QuestionBlock } from "../../shared/components/index";
+import { Pending, QuestionBlock, Error, Zero } from "../../shared/components/index";
 import { Aside } from "./ui/aside/Aside";
 import { setCatalog } from "../../entities/index";
-import { Error } from "../../shared/components/error/Error";
-import { Skeleton } from "../../shared/components/skeleton/Skeleton";
 
 export const Catalog: React.FC = (): React.JSX.Element => {
 	const dispatch = useAppDispatch();
@@ -50,20 +48,7 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 			: trucks?.slice(start);
 
 	if (status === "pending") {
-		return (
-			<div className={style.pending}>
-				<div className={style.container}>
-					<h2 className={style.title}>Идет загрузка</h2>
-					<div className={style.content}>
-						{Array.from({ length: 12 }, (_, i) => i).map(
-							(_, index) => {
-								return <Skeleton key={index} />;
-							}
-						)}
-					</div>
-				</div>
-			</div>
-		);
+		return <Pending />;
 	} else if (status === "rejected") {
 		return (
 			<div className={style.error}>
@@ -71,6 +56,11 @@ export const Catalog: React.FC = (): React.JSX.Element => {
 			</div>
 		);
 	}
+
+	if (!trucks.length) {
+		return <Zero />;
+	}
+	
 	return (
 		<div className={style.catalog}>
 			<div className={style.container}>

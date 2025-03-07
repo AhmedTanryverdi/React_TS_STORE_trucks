@@ -36,44 +36,6 @@
 	}
 }
 
-.pending {
-	width: 100%;
-	padding-bottom: 40px;
-	.container {
-		width: 1320px;
-		margin: 0 auto;
-	}
-
-	.title {
-		padding: 15px 0;
-	}
-	.title::after {
-		content: ".";
-		animation: title 0.8s linear alternate infinite;
-	}
-
-	.content {
-		margin: 0 auto;
-		@include flexPosition(flex-start, center);
-		gap: 24px;
-		flex-wrap: wrap;
-	}
-}
-
-@keyframes title {
-	0% {
-		content: ".";
-	}
-
-	50% {
-		content: "..";
-	}
-
-	100% {
-		content: "...";
-	}
-}
-
 @import "./catalog.module768.scss";
 @import "./catalog.module320.scss";
 

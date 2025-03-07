@@ -1,0 +1,33 @@
+@import "../../styles/global.scss";
+
+.zero {
+	width: 100%;
+
+	.container {
+		width: 1320px;
+		margin: 0 auto;
+        @include flexPosition(center, center, column);
+        row-gap: 12px;
+        color: grey;
+        img{
+            width: 60px;
+            height: 60px;
+        }
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+	.zero {
+		.container {
+			width: 768px;
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	.zero {
+		.container {
+			width: 320px;
+		}
+	}
+}

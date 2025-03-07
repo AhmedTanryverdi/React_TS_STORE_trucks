@@ -4,11 +4,16 @@ import { NewType } from "../../../../shared/types";
 export const getNews = createAsyncThunk(
 	"getNews/newSlice",
 	async (url: string, { rejectWithValue }): Promise<NewType[] | unknown> => {
-		const response = await fetch(url);
-		if (!response.ok) {
-			return rejectWithValue(response.status);
+		try {
+			const response = await fetch(url);
+			if (!response.ok) {
+				return rejectWithValue(response.status);
+			}
+			
+			return response.json();
+		} catch (error) {
+			return rejectWithValue(500);
 		}
-		return response.json();
 	}
 );
 

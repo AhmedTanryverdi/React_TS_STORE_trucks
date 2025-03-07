@@ -1,14 +1,12 @@
 import React, { useRef } from "react";
 import { useParams } from "react-router-dom";
-import arrow from "../../shared/assets/icon/arrows/Vector.svg";
+import arrow from "../../../../shared/assets/icon/arrows/Vector.svg";
 import { Description } from "./ui/description/Description";
 import { Drawing } from "./ui/drawing/Drawing";
-import { QuestionBlock } from "../../shared/components/index";
-import { TruckType } from "../../shared/types";
+import { QuestionBlock } from "../../../../shared/components/index";
+import { TruckType } from "../../../../shared/types";
 import { Specifications } from "./ui/specifications/Specifications";
 import style from "./onetruck.module.scss";
-
-
 
 const images = Array.from({ length: 6 }, (_, i) => i);
 
@@ -91,7 +89,7 @@ export const OneTruck: React.FC = (): React.JSX.Element => {
 													}
 												>
 													<img
-														src={require(`../../shared/assets/images/trucks/trucks/image${item}.png`)}
+														src={require(`../../../../shared/assets/images/trucks/trucks/image${item}.png`)}
 														alt="truck-image"
 													/>
 												</li>
@@ -110,7 +108,7 @@ export const OneTruck: React.FC = (): React.JSX.Element => {
 
 							<div className={style.mainImage}>
 								<img
-									src={require(`../../shared/assets/images/trucks/trucks/image${currentImg}.png`)}
+									src={require(`../../../../shared/assets/images/trucks/trucks/image${currentImg}.png`)}
 									alt="truck-image"
 								/>
 							</div>
@@ -129,14 +127,14 @@ export const OneTruck: React.FC = (): React.JSX.Element => {
 							<ul className={style.listAction}>
 								<li onClick={addToFavorite}>
 									<img
-										src={require("../../shared/assets/icon/toFavorite.png")}
+										src={require("../../../../shared/assets/icon/toFavorite.png")}
 										alt="add-to-favorite-image"
 									/>
 									<p>В избранное</p>
 								</li>
 								<li>
 									<img
-										src={require("../../shared/assets/icon/share.png")}
+										src={require("../../../../shared/assets/icon/share.png")}
 										alt="share"
 									/>
 									<p>Поделиться</p>

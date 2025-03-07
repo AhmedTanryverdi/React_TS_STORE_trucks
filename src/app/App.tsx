@@ -6,7 +6,12 @@ import { RouterProvider } from "react-router-dom";
 
 const App: React.FC = () => {
 	return (
-		<div className="App">
+		<div className="App" style={{
+			minHeight: "100vh",
+			display: "flex",
+			flexDirection: "column"
+
+		}}>
 			<RouterProvider router={router} />;
 		</div>
 	);

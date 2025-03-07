@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./specifications.module.scss";
-import { TruckType } from "../../../../shared/types";
+import { TruckType } from "../../../../../../shared/types";
 
 export const Specifications: React.FC<TruckType> = (
 	props: TruckType

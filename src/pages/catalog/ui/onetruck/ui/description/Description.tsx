@@ -66,7 +66,10 @@ export const Description: React.FC = (): React.JSX.Element => {
 							<li>Гарантия 36 месяцев</li>
 							<li>Доставка по всей России</li>
 						</ul>
-                        <img src={require('../../../../shared/assets/icon/subtract.png')} alt="img" />
+						<img
+							src={require("../../../../../../shared/assets/icon/subtract.png")}
+							alt="img"
+						/>
 					</div>
 				</div>
 			</div>

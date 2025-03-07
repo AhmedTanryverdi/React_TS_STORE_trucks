@@ -8,7 +8,7 @@ import { FeedBack } from "./feedback/FeedBack";
 import { Main } from "./main/Main";
 import { News } from "./news/News";
 import { OneNews } from "./news/ui/onenews/OneNews";
-import { OneTruck } from "./onetruck/OneTruck";
+import { OneTruck } from "./catalog/ui/onetruck/OneTruck";
 import { Partners } from "./partners/Partners";
 import { Production } from "./production/Production";
 import { Service } from "./service/Service";
